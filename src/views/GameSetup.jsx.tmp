@@ -1,0 +1,62 @@
+const GameSetup = ({ onStart, onCancel, onManageTeams }) => {
+    const [step, setStep] = useState(1);
+    const [teams, setTeams] = useState([]);
+    const [config, setConfig] = useState({ homeTeam: null, awayTeam: null, periodDuration: 10 });
+
+    useEffect(() => {
+        setTeams(loadTeams());
+    }, []);
+
+    const findTeam = (name) => teams.find(t => t.name === name);
+
+    return (
+        <div style={{ padding: '1rem', height: '100%', display: 'flex', flexDirection: 'column' }}>
+            <h2 style={{ fontSize: '1.5rem', marginBottom: '2rem' }}>Configurar Partido</h2>
+
+            {step === 1 && (
+                <div className="animate-fade-in" style={{ flex: 1 }}>
+                    <div style={{ marginBottom: '1.5rem' }}>
+                        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '5px' }}>
+                            <label style={{ fontWeight: 'bold' }}>Equipos</label>
+                            <button onClick={onManageTeams} style={{ fontSize: '0.75rem', color: '#1cb5e0', background: 'none', border: 'none', cursor: 'pointer', display: 'flex', alignItems: 'center', gap: '3px' }}>
+                                <Plus size={12} /> Crear/Editar En Equipos
+                            </button>
+                        </div>
+                        <div style={{ display: 'flex', gap: '10px', alignItems: 'center' }}>
+                            <div style={{ flex: 1 }}>
+                                <div style={{ fontSize: '0.8rem', color: '#777' }}>LOCAL</div>
+                                <select className="glass-input" style={{ width: '100%' }} onChange={(e) => setConfig({ ...config, homeTeam: findTeam(e.target.value) })}>
+                                    <option value="">Seleccionar</option>
+                                    {teams.map(t => <option key={t.id} value={t.name}>{t.name}</option>)}
+                                </select>
+                            </div>
+                            <div style={{ fontWeight: 'bold' }}>VS</div>
+                            <div style={{ flex: 1 }}>
+                                <div style={{ fontSize: '0.8rem', color: '#777' }}>VISITA</div>
+                                <select className="glass-input" style={{ width: '100%' }} onChange={(e) => setConfig({ ...config, awayTeam: findTeam(e.target.value) })}>
+                                    <option value="">Seleccionar</option>
+                                    {teams.map(t => <option key={t.id} value={t.name}>{t.name}</option>)}
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div style={{ marginBottom: '1.5rem' }}>
+                        <label style={{ fontWeight: 'bold', display: 'block', marginBottom: '5px' }}>Duración por Cuarto (minutos)</label>
+                        <input 
+                            type="number" 
+                            className="glass-input" 
+                            style={{ width: '100%', background: 'white' }} 
+                            value={config.periodDuration} 
+                            onChange={(e) => setConfig({ ...config, periodDuration: parseInt(e.target.value) || 10 })}
+                        />
+                    </div>
+                </div>
+            )}
+
+            <div style={{ marginTop: 'auto', display: 'flex', justifyContent: 'space-between' }}>
+                <button className="btn btn-secondary" onClick={onCancel}>Cancelar</button>
+                <button className="btn btn-primary" onClick={() => onStart(config)} disabled={!config.homeTeam || !config.awayTeam}>INICIAR JUEGO</button>
+            </div>
+        </div>
+    );
+};

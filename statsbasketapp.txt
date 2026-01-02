@@ -1,0 +1,137 @@
+App overview
+
+Equipos: 
+ 
+Primer item para ingresar datos de los equipos, al abrir equipos debe verse algo así.
+Luego plantilla, 
+ 
+Aquí se puede editar nombre del equipo, subir foto, ediatr nombre del coach, editar colores de camisetas, ingresar datos de jugadores, luego:
+Jugadores, aquí se puede editar datos de los jugadores, 
+
+ 
+
+Luego, interfaz de partido, pero antes configuaracion del partido:
+
+ 
+
+ 
+Elección de titulares
+ 
+
+Partido:
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+la interfaz del partido se inicia dando click en el reloj que empieza a correr, el reloj se detiene dundo se hace click y cuando se marca falta, la explicación de cada boton esta mas abajo, los botones van marcando lo que va pasando durante el partido son 4 periodos, luego los cambios, 
+ 
+
+La app debe crear  los boxscore de ambos equipos, 
+
+Take your game to the next level with Statastic Basketball.
+Track every play live – from points and rebounds to assists, steals, and fouls.
+Get instant insights with box scores, game flow charts, team and player stats, as well as shot charts and sector analysis.
+
+All your basketball data in one app – clear, precise, and ready when you need it.
+Available now on the App Store and Google Play.
+
+Game setup & recording
+Main screen
+The starting point of the app gives you a clear overview of all games. Filter by team, league, or season, start new recordings, and access game settings. From here, you can also navigate directly to your team, league, and season pages.
+ 
+Statistics
+Box score
+The Box Score gives you a complete overview of the game.
+See points, rebounds, assists, fouls, and all key stats for both teams and every player – updated live and always at your fingertips.
+ 
+  Offfensive Rebounds
+
+  Three pointer made
+
+  Three pointer attempt
+
+  Defensive Rebounds
+
+  Assists
+
+  Two pointer made
+
+  Two pointer attempt
+  Steal
+
+  Free throws made
+
+  Free throws attempt
+
+  Block
+
+  Block received
+
+  Awesome
+
+  Foul
+
+  Turnover
+
+  Travel
+
+  Double Dribbling
+
+  Turnover forced
+
+  Technical Foul
+
+  Unsportsmanlike Foul
+
+  Disqualificational Foul
+
+  Foul received
+
+Analyzable Statistics
+2FGA / 2FGM / 2FG%
+Two point field goal attempted, made & percentage
+3FGA / 3FGM / 3FG%
+Three point field goal attempted, made & percentage
+FTA / FTM / FT%
+Free throws attempted, made & percentage
+FGA / FGM / FG%
+Field goals attempted, made & percentage
+TS%
+True shooting percentage
+ORB / DRB / TRB
+Number of offensive, defensive & total Rebounds
+PTS
+Number of points
+A!
+Number of events
+AST
+Number of Assists
+TIM
+Time played
+TO
+Number of Turnovers
+STL
+Number of Steals
+BLK
+Number of Blocks
+EFF
+Efficiency Rating is a composite basketball statistic that is derived from basic individual statistics: points, rebounds, assists, steals, blocks, turnovers and shot attempts. The efficiency stat, in theory, accounts for both a player's offensive contributions (points, assists) and their defensive contributions (steals, blocks), but it is generally thought that efficiency ratings favor offense-oriented players over those who specialize in defense, as defense is difficult to quantify with currently tabulated statistics.
+Plus / Minus Index
++/- or Plus/Minus Index reflects how the team did while that player is on the court. If a player has a +5 PM, it means his team outscored the opponent by 5 points while he was on the court. If he has a -3, then the opposing team outscored his team by 3 points while he was on the court.
+PIR
+Performance Index Rating is a metric that attempts to give a perspective on a player’s total performance.
+The metric is a simple addition and subtraction of positive and negative game factors.
+A real-life example as shared directly from our app can be found HERE. 
+STATASTIC Solutions FlexCo
+
